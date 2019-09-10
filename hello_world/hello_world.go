@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/kurabi1966/GoDesignPatterns/hello_world/hello"
+)
 
 func main() {
-	fmt.Println("Hello world")
+
+	fmt.Println(hello.SayHello())
 }
