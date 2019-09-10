@@ -8,6 +8,10 @@ type rectangle struct {
 	color   string
 }
 
+func (r *rectangle) print() {
+	fmt.Println(*r)
+}
+
 func main() {
 	var rect1 = &rectangle{10, 20, "Green"} // Can't skip any value
 	fmt.Println(rect1)
@@ -20,9 +24,12 @@ func main() {
 	var rect3 = &rectangle{}
 	(*rect3).breadth = 10
 	(*rect3).color = "Blue"
-	fmt.Println(rect3) // length skipped
+	// fmt.Println(rect3) // length skipped
 
-	rect4 := rectangle{breadth: 20, color: "Yellow", length: 33}
+	rect3.print()
 
-	fmt.Println(rect4)
+	rect4 := rectangle{breadth: 20, color: "Yellow", length: 55}
+
+	// fmt.Println(rect4)
+	rect4.print()
 }
